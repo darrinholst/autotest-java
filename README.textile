@@ -1,0 +1,28 @@
+h1. autotest-java
+
+Adds the ability to run java tests with autotest.
+
+h3. Installation
+
+<pre>
+  sudo gem install ZenTest
+  sudo gem install autotest-java
+</pre>
+  
+h3. Usage
+
+<pre>
+  cd /my-java-project
+  autotest
+</pre>
+  
+h3. Limitations
+
+* only works with single maven projects
+* only looks for .class files in target, i.e. you need something else to compile like your ide
+* only works with junit tests
+* only tested with junit 4.5
+
+h3. Copyright
+
+Copyright (c) 2009 Darrin Holst. See LICENSE for details.
