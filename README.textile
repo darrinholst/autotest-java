@@ -16,7 +16,7 @@ h3. Usage
   autotest
 </pre>
   
-h3. Limitations
+h3. Temporary Limitations
 
 * only works with single maven projects
 * only looks for .class files in target, i.e. you need something else to compile like your ide
