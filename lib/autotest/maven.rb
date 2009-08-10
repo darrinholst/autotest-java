@@ -13,7 +13,7 @@ class Autotest::Maven < Autotest
   
   def make_test_cmd files_to_test
     cmd = ""
-    classes = reorder(files_to_test).map{|k,v| file_to_class(k)}
+    classes = reorder(files_to_test).map{|k,v| path_to_classname(k)}
     
     unless(classes.empty?)
       cmd = "#{java} -classpath \"#{classpath}\" #{test_runner} #{classes.join(' ')} | #{results_formatter}"
@@ -61,10 +61,6 @@ class Autotest::Maven < Autotest
   
   def test_runner
     "org.junit.runner.JUnitCore"
-  end
-  
-  def file_to_class(file)
-    file.gsub(/.*classes\//, '').gsub(/\.class/, '').gsub(/\//, '.')
   end
   
   def results_formatter
