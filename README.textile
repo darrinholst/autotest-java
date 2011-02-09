@@ -5,8 +5,8 @@ Adds the ability to run java tests with autotest.
 h3. Installation
 
 <pre>
-  sudo gem install ZenTest
-  sudo gem install autotest-java
+  gem install ZenTest
+  gem install autotest-java
 </pre>
   
 h3. Usage
