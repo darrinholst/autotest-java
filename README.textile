@@ -16,6 +16,18 @@ h3. Usage
   autotest
 </pre>
   
+h3. What your .autotest file might want to look like
+<pre>
+require 'autotest/growl'
+require 'autotest/fsevent'
+
+Autotest.add_hook :initialize do |at|
+  at.add_exception '.git'
+  at.add_exception 'src'
+  at.add_exception 'lib'
+end
+</pre>
+
 h3. Temporary Limitations
 
 * only works with single maven projects
